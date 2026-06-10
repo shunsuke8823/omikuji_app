@@ -1,3 +1,21 @@
-<h1>おみくじアプリ</h1>
-<p>下のボタンを押してね</p>
-<%= button_to 'おみくじを引く', omikuji_path, method: :get, class: 'omikuji-button' %>
+<div class="container">
+  <div class="row min-vh-100 align-items-center justify-content-center">
+    <div class="col-md-6 col-lg-5">
+      <div class="card shadow-lg border-3">
+        <div class="card-body text-center p-5">
+          <h1 class="card-title mb-4 fw-bold text-primary">
+            😎 きちみくじ 😎
+          </h1>
+          <p class="card-text text-muted mb-4">
+            このおみくじは"きち"しかでません。
+            あらかじめご了承ください。🙏
+          </p>
+          
+          <%= button_to 'きちみくじを引く', omikuji_path, 
+              method: :get, 
+              class: 'btn btn-primary btn-lg w-100 py-3' %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
