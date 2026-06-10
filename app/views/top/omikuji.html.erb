@@ -1,4 +1,34 @@
-<h1>おみくじ結果</h1>
-<p>あなたの運勢は...<%= @result %>です！</p>
- <%= button_to 'もう一度引く', method: :get, class: 'retry-button' %>
- <%= link_to 'トップに戻る', root_path, class: 'return_button' %>
+<div class="container">
+  <div class="row min-vh-100 align-items-center justify-content-center">
+    <div class="col-md-6 col-lg-5">
+      <div class="card shadow-lg border-0">
+        <div class="card-body text-center p-5">
+          <h1 class="card-title mb-4 text-secondary">
+            きちみくじ結果
+          </h1>
+          
+          <!-- 結果表示エリア -->
+          <div class="alert alert-success mb-4 py-5" role="alert">
+            <h2 class="display-1 fw-bold mb-0"><%= @result %></h2>
+          </div>
+          
+          <!-- メッセージがある場合 -->
+          <% if @message.present? %>
+            <p class="text-muted mb-4">
+              <%= @message %>
+            </p>
+          <% end %>
+          
+          <!-- ボタンエリア -->
+          <div class="d-grid gap-3">
+            <%= button_to 'もう一度引く', omikuji_path, 
+                method: :get, 
+                class: 'btn btn-primary btn-lg' %>
+            <%= link_to 'トップに戻る', root_path, 
+                class: 'btn btn-outline-secondary btn-lg' %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
