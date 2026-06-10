@@ -1,0 +1,4 @@
+<h1>おみくじ結果</h1>
+<p>あなたの運勢は...<%= @result %>です！</p>
+ <%= button_to 'もう一度引く', method: :get, class: 'retry-button' %>
+ <%= link_to 'トップに戻る', root_path, class: 'return_button' %>
