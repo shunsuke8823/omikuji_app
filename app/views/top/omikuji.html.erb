@@ -4,16 +4,16 @@
       <div class="card shadow-lg border-0">
         <div class="card-body text-center p-5">
           <h1 class="card-title mb-4 text-secondary">
-            きちみくじ結果
+            ☆きちみくじ結果☆
           </h1>
           
           <!-- 結果表示エリア -->
-          <div class="alert alert-success mb-4 py-5" role="alert">
-            <h2 class="display-1 fw-bold mb-0"><%= @fortune.result %></h2>
+          <div class="<%= @styles[:bg] %> <%= @styles[:text] %> p-5 rounded text-center">
+            <h2 class="<%= @styles[:size] %> fw-bold mb-0"><%= @fortune.result %></h2>
           </div>
           
-          <!-- メッセージがある場合 -->
-            <p class="text-muted mb-4">
+          <!-- メッセージを表示 -->
+            <p class="display-6 fw-bold mb-4 mt-4">
               <%= @fortune.description %>
             </p>
           
