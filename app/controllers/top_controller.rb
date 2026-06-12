@@ -4,7 +4,7 @@ class TopController < ApplicationController
   end
 
   def omikuji
-    results = ['大吉', '中吉', '小吉', '吉', '末吉']
-    @result = results.sample
+    # データーベースからランダムに一件取得
+    @result = Omikuji.all.sample
   end
-  end
+end
