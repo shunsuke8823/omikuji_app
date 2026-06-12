@@ -5,6 +5,6 @@ class TopController < ApplicationController
 
   def omikuji
     # データーベースからランダムに一件取得
-    @result = Omikuji.all.sample
+    @fortune = Omikuji.all.sample
   end
 end
